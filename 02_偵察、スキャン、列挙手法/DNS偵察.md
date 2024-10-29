@@ -79,7 +79,7 @@ dig +short @172.30.0.254 A www.falsimentis.com
   - NW構成の推測が可能になる
   - サービスの提供形態が分析できる
   - 攻撃の準備段階で悪用される
--  **具体的なやり方**
+- **具体的なやり方**
   - DNSゾーン転送攻撃は、digでDNSレコードに`AXFR`を指定し、対象のドメインを指定（falsimentis.com）することで実行できる  
 ```bash
 dig +short @172.30.0.254 AXFR falsimentis.com
