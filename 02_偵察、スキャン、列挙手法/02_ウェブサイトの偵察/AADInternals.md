@@ -36,7 +36,7 @@
   - パススルー認証エージェントの設定の一部としてのレジストリキーの変更  
 
 ## 3.収集できる情報
-- 概 要
+- **概 要**
   - 項目2ではAADInternalの主な機能を上げたが、その機能の中で収集できる情報のみ抽出してより詳細にして下記に整理する
   - ここで収集できる情報は認証不要なAPIや認証済みのAPIを通じて取得することができる
     - しかしながら認証不要APIで取得できる情報は限定的であるため、より詳細な情報を取得するには、適切な認証と権限が必要となる 
@@ -68,7 +68,7 @@
 
 ## 5.使い方
 - **SETUP**
-  - AADInternalはPowerShellもモジュールなので、使用するにはAADinternalのインストールとモジュールインポートが必要
+  - AADInternalはPowerShellのモジュールなので、使用するにはAADinternalのインストールとモジュールのインポートが必要
 ```powerShell
 # モジュールのインストール
 Install-Module AADInternals
@@ -103,4 +103,9 @@ Get-AADIntTenantDomains -Domain example.com
 # Get-AADIntOpenIDConfiguration
 ## OpenID設定情報を取得する
 Get-AADIntOpenIDConfiguration -Domain example.com
+```
+```powerShell
+# AADIntUserEnumerationAsOutsider
+## ドメインに関連付けられた情報（ユーザ名、メールアドレスなど）を取得する
+AADIntUserEnumerationAsOutsider -DomainName example.com
 ```
